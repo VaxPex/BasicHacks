@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Hussain\\source\\repos\\hack\\hack\\hack.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Hussain\\source\\repos\\hack\\hack\\hack.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Hussain\\source\\repos\\hack\\hack\\hack.csproj",
+        "projectName": "hack",
+        "projectPath": "C:\\Users\\Hussain\\source\\repos\\hack\\hack\\hack.csproj",
+        "packagesPath": "C:\\Users\\Hussain\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Hussain\\source\\repos\\hack\\hack\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hussain\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Memory.dll.x64": {
+              "target": "Package",
+              "version": "[1.2.24, )"
+            },
+            "Memory.dll.x86": {
+              "target": "Package",
+              "version": "[1.2.24, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

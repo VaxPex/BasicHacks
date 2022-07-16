@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "JO9UCIcNP6U28sdbag4zjVICpouqtjIRRuCBEhzy/IxqVFO1M1ZJYQ6wdNd0X2WpU4ebjx0vbqKRiOlR9H63Fg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Hussain\\source\\repos\\hack\\hack\\hack.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hussain\\.nuget\\packages\\memory.dll.x64\\1.2.24\\memory.dll.x64.1.2.24.nupkg.sha512",
+    "C:\\Users\\Hussain\\.nuget\\packages\\memory.dll.x86\\1.2.24\\memory.dll.x86.1.2.24.nupkg.sha512"
+  ],
+  "logs": []
+}
