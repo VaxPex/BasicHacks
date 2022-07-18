@@ -34,7 +34,6 @@ namespace MC
                 {
                     Console.WriteLine("Minecraft Not Found");
                 }
-
             }
 
             public bool isEnabled()
@@ -45,42 +44,24 @@ namespace MC
 
         public class Reach : moduleBase
         {
-            public void Sync(string value)
+            public void Synchronize(string value)
             {
                 base.Sync();
-                mem.WriteMemory("Minecraft.Windows.exe+3A224B0", "float", value);
+                mem.WriteMemory("Minecraft.Windows.exe+0x3A224B0", "float", value);
                 Console.WriteLine("Reach Set");
             }
 
-            public void UnSync()
+            public void UnSynchronize()
             {
                 base.UnSync();
-                mem.WriteMemory("Minecraft.Windows.exe+3A224B0", "float", "3.0");
+                mem.WriteMemory("Minecraft.Windows.exe+0x3A224B0", "float", "3.0");
                 Console.WriteLine("Reach Module UnInitialized");
-            }
-        }
-
-        public class HitBox : moduleBase
-        {/**1CD9C7C8110*/ // TODO: get the address soon
-            public void Sync(string value)
-            {
-                base.Sync();
-                mem.WriteMemory("Minecraft.Windows.exe+0x1937A3F", "float", value);
-                Console.WriteLine("HitBox Changed");
-            }
-
-            public void UnSync()
-            {
-                base.UnSync();
-                mem.WriteMemory("Minecraft.Windows.exe+0x1937A3F", "float", "0.6");
-                Console.WriteLine("HitBox Module UnInitialized");
             }
         }
 
         public static void DisableAll()
         {
-            new Reach().UnSync();
-            //new HitBox().UnSync();
+            new Reach().UnSynchronize();
         }
     }
 }
@@ -106,7 +87,6 @@ namespace Program
             Console.WriteLine("disable -> disable all modules");
             Console.WriteLine("exit -> exit");
             var reachModule = new MC.modules.Reach();
-            var hitboxModule = new MC.modules.HitBox();
             while (true)
             {
                 var line = Console.ReadLine().ToLower();
@@ -117,7 +97,7 @@ namespace Program
                         var amount = line.Split(" ")[1];
                         if (!amount.StartsWith("0"))
                         {
-                            reachModule.Sync(amount);
+                            reachModule.Synchronize(amount);
                         }
                     } else
                     {
