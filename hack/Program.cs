@@ -11,7 +11,7 @@ namespace MC
             protected static Mem mem = new Mem();
             protected static int PID = mem.GetProcIdFromName("Minecraft.Windows.exe");
 
-            public void Sync()
+            public void Synchronize()
             {
                 enabled = true;
                 if (PID > 0)
@@ -23,7 +23,7 @@ namespace MC
                 }
             }
 
-            public void UnSync()
+            public void UnSynchronize()
             {
                 enabled = false;
                 if (PID > 0)
@@ -44,14 +44,16 @@ namespace MC
 
         public class Reach : moduleBase
         {
-            public void Synchronize(string value) : base()
+            public void Synchronize(string value)
             {
+		base.Synchronize();
                 mem.WriteMemory("Minecraft.Windows.exe+0x3A224B0", "float", value);
                 Console.WriteLine("Reach Set");
             }
 
-            public void UnSynchronize() : base()
+            public void UnSynchronize()
             {
+		base.UnSynchronize();
                 mem.WriteMemory("Minecraft.Windows.exe+0x3A224B0", "float", "3.0");
                 Console.WriteLine("Reach Module UnInitialized");
             }
