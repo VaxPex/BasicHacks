@@ -44,16 +44,14 @@ namespace MC
 
         public class Reach : moduleBase
         {
-            public void Synchronize(string value)
+            public void Synchronize(string value) : base()
             {
-                base.Sync();
                 mem.WriteMemory("Minecraft.Windows.exe+0x3A224B0", "float", value);
                 Console.WriteLine("Reach Set");
             }
 
-            public void UnSynchronize()
+            public void UnSynchronize() : base()
             {
-                base.UnSync();
                 mem.WriteMemory("Minecraft.Windows.exe+0x3A224B0", "float", "3.0");
                 Console.WriteLine("Reach Module UnInitialized");
             }
